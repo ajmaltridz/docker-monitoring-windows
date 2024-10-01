@@ -48,6 +48,13 @@ services:
     ports:
       - 9100:9100
     restart: always
+
+  win-node-exporter:
+    image: docker.io/prometheuscommunity/windows-exporter
+    container_name: win-node-exporter
+    ports:
+      - 9182:9182
+    restart: always
        
 
   cadvisor:

@@ -57,4 +57,10 @@ scrape_configs:
       # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ["host.docker.internal:9323"]      
+      - targets: ["host.docker.internal:9323"]     
+
+  - job_name: 'win-node-exporter'
+    scrape_interval: 5s
+
+    static_configs:
+    - targets: ['win-node-exporter:9182'] 
