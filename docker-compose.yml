@@ -47,15 +47,7 @@ services:
       - "^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)"
     ports:
       - 9100:9100
-    restart: always
-
-  win-node-exporter:
-    image: docker.io/prometheuscommunity/windows-exporter
-    container_name: win-node-exporter
-    ports:
-      - 9182:9182
-    restart: always
-       
+    restart: always      
 
   cadvisor:
     image: google/cadvisor
